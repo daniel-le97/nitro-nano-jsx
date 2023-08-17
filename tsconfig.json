@@ -6,7 +6,8 @@
     "noEmit": true,
     "allowJs": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./"
 }
   // "compilerOptions": {
   //   "lib": ["ESNext", "DOM", "DOM.Iterable"],

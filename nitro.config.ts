@@ -4,17 +4,19 @@ export default defineNitroConfig({
     experimental: {
         openAPI: true
     },
-    // typescript: {
-    //     tsConfig: {
-    //         compilerOptions:{
-    //             moduleResolution: 'bundler',
-    //             allowImportingTsExtensions: true,
-    //             noEmit: true,
-    //             allowJs: true,
-    //             esModuleInterop: true,
-    //             allowSyntheticDefaultImports: true
-    //         }
-    //     }
-    // },
+    baseURL: '/',
+    typescript: {
+        tsConfig: {
+            compilerOptions:{
+                moduleResolution: 'bundler',
+                allowImportingTsExtensions: true,
+                noEmit: true,
+                allowJs: true,
+                esModuleInterop: true,
+                allowSyntheticDefaultImports: true,
+                baseUrl: '../../'
+            }
+        }
+    },
 
 });
