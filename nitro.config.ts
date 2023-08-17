@@ -1,6 +1,6 @@
 //https://nitro.unjs.io/config
 export default defineNitroConfig({
-    preset: 'bun',
+    preset: 'node',
     experimental: {
         openAPI: true
     },

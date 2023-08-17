@@ -2,22 +2,20 @@
   "private": true,
   "scripts": {
     "prepare": "nitropack prepare",
-    "dev": "concurrently \"bun run nitro\" \"bun run tw:dev\"",
+    "dev": "concurrently \"npm run nitro\" \"npm run tw:dev\"",
     "nitro": "nitropack dev",
     "build": "nitropack build",
     "preview": "node .output/server/index.mjs",
-    "tw": "bunx tailwindcss -i ./styles.css -o ./generatedStyles.css",
-    "tw:dev": "bunx tailwindcss -i ./styles.css -o ./generatedStyles.css --watch"
+    "tw": "npx tailwindcss -i ./styles.css -o ./generatedStyles.css",
+    "tw:dev": "npx tailwindcss -i ./styles.css -o ./generatedStyles.css --watch"
   },
   "dependencies": {
-    "bun": "latest",
-    "bun-types": "^0.7.3",
-    "concurrently": "^8.2.0",
     "nano-jsx": "^0.0.37",
     "nitropack": "latest",
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
-    "clean-css": "^5.3.2"
+    "clean-css": "^5.3.2",
+    "concurrently": "^8.2.0"
   }
 }
