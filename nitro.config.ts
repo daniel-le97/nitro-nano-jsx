@@ -1,6 +1,7 @@
 //https://nitro.unjs.io/config
 export default defineNitroConfig({
     preset: 'bun',
+    plugins: ['plugins/1.routes.ts'],
     experimental: {
         openAPI: true
     },

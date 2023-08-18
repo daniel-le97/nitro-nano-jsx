@@ -1,8 +1,11 @@
+// import { Comments } from '../components/comments.tsx';
 import Nano, { Component, Helmet, h, withStyles } from 'nano-jsx';
-import { Checkbox } from '../components/app.tsx';
+// import { Comments } from '../components/app.tsx';
+import { RenderHandler } from 'nitropack';
+import { Comments } from '../components/comments.tsx';
 
 const App = () => {
-  return useStyles(
+  return (
     <div>
       <Helmet>
         <html lang="en" amp />
@@ -10,8 +13,9 @@ const App = () => {
         <body class="main" id="id" />
         <title>Nano JSX Helmet SSR</title>
         <meta name="description" content="Nano-JSX application" />
+        <script src="/index.js"></script>
       </Helmet>
-      <Checkbox />
+      <Comments />
     </div>
   );
 };
@@ -34,7 +38,12 @@ const html = `
 </html>
 `;
 
-export default defineEventHandler( () => {
+
+
+
+export default defineEventHandler( (event) => {
+  const root = `${process.cwd()}/islands`
+
   // const app = html
   return html;
 } );
